@@ -1,6 +1,18 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/auth/auth",
+    "pages/cart/cart",
+    "pages/category/category",
+    "pages/collect/collect",
+    "pages/feedback/feedback",
+    "pages/goods_detail/goods_detail",
+    "pages/goods_list/goods_list",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/pay/pay",
+    "pages/search/search",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
