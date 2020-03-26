@@ -16,10 +16,44 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "Aaron",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#eb4450",
+    "backgroundColor": "",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-on.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "icons/category.png",
+        "selectedIconPath": "icons/category-on.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/cart.png",
+        "selectedIconPath": "icons/cart-on.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-on.png"
+      }
+    ]
+  },
+  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
