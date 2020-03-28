@@ -39,3 +39,19 @@ export const openSetting = () => {
     });
   })
 }
+
+export const showToast = ({title}) => {
+  return new Promise((resolve, reject) => {
+    wx.showToast({
+      title: '提示',
+      icon: "none",
+      title: title,
+      success: (res)=>{
+        resolve(res);
+      },
+      fail: (err)=>{
+        reject(err);
+      },
+    });
+  })
+}

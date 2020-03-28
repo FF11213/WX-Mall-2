@@ -41,6 +41,8 @@
 
 .icon-receipt-address:before {
   content: "\e673";
+  font-size: 40rpx;
+  font-weight: 600;
 }
 
 .icon-kefu:before {
@@ -61,4 +63,55 @@
 
 .icon-shoucang:before {
   content: "\e631";
+}
+
+/* user */
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1720732_0zad9lt72dj.eot?t=1585394403716'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1720732_0zad9lt72dj.eot?t=1585394403716#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_1720732_0zad9lt72dj.woff?t=1585394403716') format('woff'),
+  url('//at.alicdn.com/t/font_1720732_0zad9lt72dj.ttf?t=1585394403716') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1720732_0zad9lt72dj.svg?t=1585394403716#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-serve:before {
+  content: "\e684";
+}
+
+.icon-tuijian:before {
+  content: "\e60f";
+}
+
+.icon-Opinion:before {
+  content: "\e613";
+}
+
+.icon-guanyu:before {
+  content: "\e728";
+}
+
+.icon-chakantiezigengduoshoucang:before {
+  content: "\e66c";
+}
+
+.icon-shouhuodizhi:before {
+  content: "\e616";
+}
+
+.icon-history:before {
+  content: "\e603";
+}
+
+.icon-wodedingdan:before {
+  content: "\e615";
 }

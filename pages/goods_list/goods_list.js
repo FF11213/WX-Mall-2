@@ -49,7 +49,10 @@ Page({
     
     this.setData({
       goodsList: [...this.data.goodsList,...res.goods]
-    })
+    });
+
+    // 关闭下拉刷新
+    wx.stopPullDownRefresh();
   },
 
   // 标题点击事件 从子组件传递
@@ -80,6 +83,19 @@ Page({
       this.QueryParams.pagenum++;
       this.getGoodsList();
     }
+  },
+
+  // 下拉刷新事件
+  onPullDownRefresh() {
+    // 重置数组
+    this.setData({
+      goodsList: []
+    })
+    // 重置页码
+    this.QueryParams.pagenum = 1;
+    // 重新发送请求
+    this.getGoodsList();
   }
+
 
 })

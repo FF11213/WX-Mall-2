@@ -1,2 +1,72 @@
-<!--pages/pay/pay.wxml-->
-<text>pages/pay/pay.wxml</text>
+<view class="user_info_row">
+  <view class="user_info">
+    <view>您的收货地址</view>
+    <view class="user_info_wrap">
+      <view class="user_name">{{address.userName}}</view>
+      <view class="user_phone">{{address.telNumber}}</view>
+    </view>
+    <view class="user_address">
+      {{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+    </view>
+  </view>
+</view>
+
+
+<view class="order_content">
+  <view class="order_title">订单详情</view>
+  <view class="iconfont icon-receipt-address">
+    <text>快速配送</text>
+  </view>
+</view>
+
+
+<!-- 详情内容 -->
+<view class="cart_content">
+  <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+    <!-- 商品图片 -->
+    <navigator class="cart_img_wrap">
+      <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+    </navigator>
+    <!-- 商品信息 -->
+    <view class="cart_info_wrap">
+      <view class="goods_name">{{item.goods_name}}</view>
+      <view class="goods_price_wrap">
+        <view class="goods_num">{{item.num}} x</view>
+        <view class="goods_price">￥{{item.goods_price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- {{totalNum}} -->
+<view class="total_price">
+  <view class="total">
+    <view class="total_left">
+      商品合计：
+    </view>
+    <view class="total_right">
+      ￥{{totalPrice}}
+    </view>
+  </view>
+  <view class="total2">
+    <view class="total_left">
+      配送费：
+    </view>
+    <view class="total_right">
+      ￥16
+    </view>
+  </view>
+  <view class="box"><view class="box-border"></view></view>
+  <view class="total3">
+    <view class="total_left">
+      实付：
+    </view>
+    <view class="total_right">
+      ￥{{totalPrice + 16}}
+    </view>
+  </view>
+    
+    
+    <!-- 结算 -->
+    <button>继续支付</button>
+</view>

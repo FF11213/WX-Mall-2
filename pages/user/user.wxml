@@ -1,2 +1,51 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user_info_wrap">
+  <view wx:if="{{userinfo.nickName}}" class="user_img_wrap">
+    <!-- <image></image> -->
+    <view class="user_info">
+      <image src="{{userinfo.avatarUrl}}" class="user_icon"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <navigator url="/pages/login/login">登录</navigator>
+  </view>
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <navigator url="/pages/order/order">
+      <view class="iconfont icon-wodedingdan"></view>
+      <view class="mian_name">我的订单</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-chakantiezigengduoshoucang"></view>
+      <view class="mian_name">我的收藏</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-history"></view>
+      <view class="mian_name">我的历史</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-shouhuodizhi"></view>
+      <view class="mian_name">我的地址</view>
+    </navigator>
+  </view>
+  <!-- 应用相关信息 -->
+  <view class="app_info_wrap">
+    <navigator>
+      <view class="iconfont icon-serve"></view>
+      <view class="mian_name">联系客服</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-Opinion"></view>
+      <view class="mian_name">意见反馈</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-guanyu"></view>
+      <view class="mian_name">关于我们</view>
+    </navigator>
+    <navigator>
+      <view class="iconfont icon-tuijian"></view>
+      <view class="mian_name">把小程序推荐给其他人</view>
+    </navigator>
+    </view>
+</view>

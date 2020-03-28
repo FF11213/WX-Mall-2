@@ -4,10 +4,10 @@ page {
 
 .receive_address_row {
   .address_btn {
-    padding: 20rpx;
+    padding: 30rpx;
 
     button {
-      width: 50%;
+      width: 70%;
     }
   }
 
@@ -31,11 +31,10 @@ page {
 .cart_content {
 
   .cart_title {
-    padding: 20rpx;
-    font-size: 40rpx;
+    padding: 25rpx;
+    font-size: 45rpx;
     color: var(--themeColor);
     font-weight: 600;
-
   }
 
   .cart_main {
@@ -100,8 +99,6 @@ page {
               justify-content: center;
               align-items: center;
               border-bottom: 1rpx solid #ccc;
-
-
             }
 
             .goods_num {
@@ -110,10 +107,10 @@ page {
               display: flex;
               justify-content: center;
               align-items: center;
-
             }
           }
         }
+
       }
     }
   }
@@ -139,7 +136,8 @@ page {
   .total_price {
     flex: 5;
     text-align: right;
-    padding: 22rpx 15rpx 0 0;
+    padding: 20rpx 15rpx 0 0;
+
     .total_price_text {
       color: var(--themeColor);
       font-size: 34rpx;
@@ -158,5 +156,48 @@ page {
     justify-content: center;
     align-items: center;
 
+  }
+}
+
+.empty_page{
+  background-color: var(--themeColor);
+  height: 100vh;
+  .cart_empty1{
+    padding: 200rpx 0 20rpx 25rpx;
+    // background-color: var(--themeColor);
+    text {
+      font-size: 46rpx;
+      font-weight: 600;
+      padding: 40rpx;
+      color: #fff;
+      // color: var(--themeColor);
+    }
+  }
+  .cart_empty2{
+    padding: 0 0 40rpx 25rpx;
+    // background-color: var(--themeColor);
+    text {
+      font-size: 50rpx;
+      font-weight: 600;
+      padding: 40rpx;
+      color: #fff;
+      // color: var(--themeColor);
+    }
+  }
+  
+  .empty_button {
+    float: left;
+    padding-left: 65rpx;
+    // background-color: var(--themeColor);
+  
+    button {
+      // background-color: var(--themeColor);
+      color: #000;
+      width: 280rpx;
+      height: 80rpx;
+      padding-top: 24rpx;
+      border-radius: 40rpx;
+      font-size: 26rpx;
+    }
   }
 }

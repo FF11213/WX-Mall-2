@@ -27,21 +27,22 @@
 </view>
 
 <!-- buttombar -->
-<view class="btm_tool">
-  <view class="tool_item">
-    <view class="iconfont icon-kefu"></view>
-    <view>客服</view>
-    <button open-type="contact"></button>
+
+  <view class="btm_tool" style="padding-bottom: {{isIphoneX ? '68rpx' : '0rpx'}};height: {{isIphoneX ? '158rpx' : '90rpx'}}">
+    <view class="tool_item">
+      <view class="iconfont icon-kefu"></view>
+      <view>客服</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="tool_item">
+      <view class="iconfont icon-yixianshi-"></view>
+      <view>分享</view>
+      <button open-type="share"></button>
+    </view>
+    <navigator class="tool_item">
+      <view class="iconfont icon-shoucang2"></view>
+      <view>收藏</view>
+    </navigator>
+    <view class="tool_item btn_cart" bind:tap="handleCartAdd">加入购物车</view>
+    <view class="tool_item btn_buy">立即购买</view>
   </view>
-  <view class="tool_item">
-    <view class="iconfont icon-yixianshi-"></view>
-    <view>分享</view>
-    <button open-type="share"></button>
-  </view>
-  <navigator class="tool_item">
-    <view class="iconfont icon-shoucang2"></view>
-    <view>收藏</view>
-  </navigator>
-  <view class="tool_item btn_cart" bind:tap="handleCartAdd">加入购物车</view>
-  <view class="tool_item btn_buy">立即购买</view>
-</view>

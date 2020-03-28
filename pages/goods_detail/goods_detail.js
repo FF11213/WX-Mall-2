@@ -1,3 +1,4 @@
+var app = getApp();
 import { request } from "../../request/index";
 
 Page({
@@ -8,6 +9,13 @@ Page({
   // 商品对象
   GoodsInfo: {},
   onLoad: function (options) {
+    let modelmes = wx.getStorageSync('modelmes');
+    let isIphoneX = app.globalData.isIphoneX;
+    this.setData({
+      isIphoneX: isIphoneX
+    })
+    console.log(isIphoneX);
+    
     const { goods_id } = options
     // console.log(goods_id);
     this.getGoodsDetail(goods_id);
@@ -50,9 +58,9 @@ Page({
     // 4.已经存在 修改商品数量
     // 5.不存在 直接给购物车数组添加一个新元素
     // 6.弹出提示
-    let cart = wx.getStorageSync("cart")||[];
-    let index = cart.findIndex(v => v.goods_id===this.GoodsInfo.goods_id)
-    if(index === -1){
+    let cart = wx.getStorageSync("cart") || [];
+    let index = cart.findIndex(v => v.goods_id === this.GoodsInfo.goods_id)
+    if (index === -1) {
       // 不存在 第一次添加
       this.GoodsInfo.num = 1;
       this.GoodsInfo.checked = true;
@@ -63,7 +71,7 @@ Page({
         mask: true,
       });
 
-    }else{
+    } else {
       // 已经存在购物车中 num++
       cart[index].num++;
       wx.showToast({

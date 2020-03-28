@@ -1,4 +1,1 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
-
-  
+<button type="warn" open-type="getUserInfo" plain="{{true}}" bindgetuserinfo="handleGetUserInfo"> 登录 </button>

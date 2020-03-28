@@ -1,1 +1,72 @@
-/* pages/user/user.wxss */
+.user_info_wrap {
+  height: 35vh;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user_info_wrap .user_img_wrap image {
+  background-color: var(--themeColor);
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  padding-top: 20rpx;
+  font-size: 32rpx;
+  color: white;
+}
+.user_info_wrap .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+  text-align: center;
+  border: 2rpx solid white;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  color: black;
+  font-size: 38rpx;
+  padding: 30rpx;
+}
+.user_content .user_main {
+  margin-top: 30rpx;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30rpx;
+}
+.user_content .user_main navigator {
+  flex: 1;
+  text-align: center;
+}
+.user_content .user_main navigator .iconfont {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.user_content .user_main navigator .mian_name {
+  margin-top: 18rpx;
+  font-size: 24rpx;
+}
+.user_content .app_info_wrap navigator {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0 30rpx 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.user_content .app_info_wrap navigator .iconfont {
+  padding-left: 20rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.user_content .app_info_wrap navigator .mian_name {
+  padding-left: 10rpx;
+  font-size: 26rpx;
+}

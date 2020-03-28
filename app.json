@@ -12,7 +12,8 @@
     "pages/order/order",
     "pages/pay/pay",
     "pages/search/search",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/demo/demo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -50,7 +51,6 @@
       }
     ]
   },
-  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
