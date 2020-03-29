@@ -70,3 +70,52 @@
   padding-left: 10rpx;
   font-size: 26rpx;
 }
+.empty_page {
+  background-color: var(--themeColor);
+  height: 35vh;
+}
+.empty_page .user_empty1 {
+  padding: 100rpx 0 20rpx 60rpx;
+}
+.empty_page .user_empty1 text {
+  font-size: 46rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.empty_page .user_empty2 {
+  padding-bottom: 40rpx;
+  padding-left: 40rpx;
+}
+.empty_page .user_empty2 text {
+  font-size: 46rpx;
+  font-weight: 600;
+  padding: 20rpx;
+  color: #fff;
+}
+.empty_page .empty_button {
+  float: left;
+  padding-left: 60rpx;
+}
+.empty_page .empty_button button {
+  color: #000;
+  width: 280rpx;
+  height: 80rpx;
+  padding-top: 22rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+}
+.empty_kefu navigator {
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0 40rpx 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.empty_kefu navigator .iconfont {
+  padding-left: 60rpx;
+  font-size: 50rpx;
+  font-weight: 600;
+}
+.empty_kefu navigator .mian_name {
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}

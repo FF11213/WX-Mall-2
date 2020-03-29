@@ -11,6 +11,7 @@ page {
 
     .left_menu {
       flex: 2;
+      padding: 10rpx 0;
 
       .menu_item {
         height: 80rpx;
@@ -30,31 +31,40 @@ page {
       flex: 5;
 
       .goods_group {
+        padding: 15rpx 0;
         .goods_title {
           height: 80rpx;
           display: flex;
           justify-content: center;
           align-items: center;
+          padding: 10rpx 0;
+
           .delimiter {
-            color: gray;
+            color: rgb(90, 90, 90);
             padding: 0 10rpx;
+            font-weight: 600;
           }
+
           .title {
             padding: 10rpx 0;
-            font-size: 30rpx;
+            font-size: 34rpx;
+            font-weight: 500;
           }
         }
 
         .goods_list {
           display: flex;
           flex-wrap: wrap;
+
           navigator {
             width: 33.33%;
             text-align: center;
             padding-bottom: 20rpx;
+
             image {
               width: 50%;
             }
+
             .goods_name {
               font-size: 28rpx;
             }

@@ -1,2 +1,13 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="search_row">
+  <view class="iconfont icon-sousuo1"></view>
+  <input value="{{inpValue}}" bindconfirm="handleConfirm" bindinput="handleInput" focus="{{true}}" placeholder="搜搜你想要的" type="text"></input>
+  <view class="tool_item" hidden="{{!isFocus}}" bind:tap="handleDelect">
+    <view class="iconfont icon-quxiao2"></view>
+  </view>
+  <view class="cancel" bind:tap="handleCancel">
+    取消
+  </view>
+</view>
+<view class="search_content">
+  <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="search_item" wx:for="{{goods}}" wx:key="goods_id">{{item.goods_name}}</navigator>
+</view>

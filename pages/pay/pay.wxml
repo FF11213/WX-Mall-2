@@ -65,8 +65,8 @@
       ￥{{totalPrice + 16}}
     </view>
   </view>
-    
-    
-    <!-- 结算 -->
-    <button>继续支付</button>
 </view>
+    <!-- 结算 -->
+    <view class="bottom">
+      <button bind:tap="handleOrderPay">继续支付</button>
+    </view>

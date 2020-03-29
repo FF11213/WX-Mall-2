@@ -1,1 +1,48 @@
-/* pages/search/search.wxss */
+.search_row {
+  height: 110rpx;
+  padding: 0 10rpx;
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+}
+.search_row .icon-sousuo1 {
+  flex: 1;
+  height: 100%;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_row input {
+  flex: 5;
+  height: 100%;
+}
+.search_row .tool_item .icon-quxiao2 {
+  flex: 1;
+  height: 100%;
+  font-size: 36rpx;
+  color: #646464;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_row .cancel {
+  flex: 1;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_content {
+  margin-top: 20rpx;
+  padding: 0 15rpx 0 25rpx;
+}
+.search_content .search_item {
+  font-size: 24rpx;
+  display: flex;
+  padding: 30rpx 20rpx 20rpx 15rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

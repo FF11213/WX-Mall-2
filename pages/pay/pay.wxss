@@ -26,10 +26,13 @@
 }
 .order_content .iconfont {
   padding-left: 40rpx;
+  font-size: 50rpx;
+  font-weight: 600;
 }
 .order_content .iconfont text {
-  font-size: 28rpx;
+  font-size: 30rpx;
   padding-left: 20rpx;
+  font-weight: normal;
 }
 .cart_content .cart_item {
   display: flex;
@@ -78,14 +81,11 @@
   align-items: center;
   font-size: 26rpx;
 }
-.total_price {
-  margin-bottom: 120rpx;
-}
 .total_price .total {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50rpx 0 10rpx 0;
+  padding: 60rpx 0 10rpx 0;
   font-size: 26rpx;
 }
 .total_price .total .total_left {
@@ -99,7 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 60rpx 0;
+  padding: 0 0 40rpx 0;
   font-size: 26rpx;
 }
 .total_price .total2 .total_left {
@@ -113,7 +113,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30rpx 0 100rpx 0;
+  padding: 60rpx 0 60rpx 0;
   font-size: 26rpx;
   font-weight: 600;
 }
@@ -124,14 +124,17 @@
   padding-right: 30rpx;
   font-size: 30rpx;
 }
-.total_price button {
+.bottom {
+  padding-bottom: 120rpx;
+}
+.bottom button {
   background-color: var(--themeColor);
   color: white;
-  width: 100%;
+  width: 400rpx;
   height: 90rpx;
-  padding-top: 30rpx;
+  padding-top: 28rpx;
   border-radius: 40rpx;
-  font-size: 26rpx;
+  font-size: 28rpx;
 }
 .box {
   width: 200rpx;

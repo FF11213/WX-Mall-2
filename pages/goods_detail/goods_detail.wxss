@@ -91,3 +91,6 @@ page {
   font-size: 28rpx;
   font-weight: 600;
 }
+.btm_tool .iconfont {
+  font-size: 35rpx;
+}

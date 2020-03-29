@@ -2,21 +2,25 @@
   height: 35vh;
   background-color: var(--themeColor);
   position: relative;
+
   .user_img_wrap {
     image {
       background-color: var(--themeColor);
     }
+
     .user_info {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 35%;
       text-align: center;
+
       .user_icon {
         width: 160rpx;
         height: 160rpx;
         border-radius: 50%;
       }
+
       .user_name {
         padding-top: 20rpx;
         font-size: 32rpx;
@@ -24,6 +28,7 @@
       }
     }
   }
+
   .user_btn {
     position: absolute;
     left: 50%;
@@ -47,9 +52,11 @@
     display: flex;
     border-bottom: 1px solid #eee;
     padding-bottom: 30rpx;
+
     navigator {
       flex: 1;
       text-align: center;
+
       .iconfont {
         font-size: 32rpx;
         font-weight: 600;
@@ -61,21 +68,94 @@
       }
     }
   }
+
   .app_info_wrap {
     navigator {
       display: flex;
       align-items: center;
       padding: 30rpx 0 30rpx 10rpx;
       border-bottom: 1rpx solid #eee;
-      .iconfont{
+
+      .iconfont {
         padding-left: 20rpx;
-        font-size:40rpx;
+        font-size: 40rpx;
         font-weight: 600;
       }
+
       .mian_name {
         padding-left: 10rpx;
         font-size: 26rpx;
       }
     }
   }
+}
+
+
+.empty_page {
+  background-color: var(--themeColor);
+  height: 35vh;
+
+  .user_empty1 {
+    padding: 100rpx 0 20rpx 60rpx;
+
+    // background-color: var(--themeColor);
+    text {
+      font-size: 46rpx;
+      font-weight: 600;
+      // padding: 40rpx;
+      color: #fff;
+      // color: var(--themeColor);
+
+    }
+  }
+
+  .user_empty2 {
+    padding-bottom: 40rpx;
+    padding-left: 40rpx;
+
+    // background-color: var(--themeColor);
+    text {
+      font-size: 46rpx;
+      font-weight: 600;
+      padding: 20rpx;
+      color: #fff;
+      // color: var(--themeColor);
+
+    }
+  }
+
+  .empty_button {
+    float: left;
+    padding-left: 60rpx;
+    button {
+      // background-color: var(--themeColor);
+      color: #000;
+      width: 280rpx;
+      height: 80rpx;
+      padding-top: 22rpx;
+      border-radius: 40rpx;
+      font-size: 28rpx;
+    }
+  }
+}
+
+.empty_kefu {
+  navigator {
+    display: flex;
+    align-items: center;
+    padding: 40rpx 0 40rpx 10rpx;
+    border-bottom: 1rpx solid #eee;
+
+    .iconfont {
+      padding-left: 60rpx;
+      font-size: 50rpx;
+      font-weight: 600;
+    }
+
+    .mian_name {
+      padding-left: 20rpx;
+      font-size: 30rpx;
+    }
+  }
+
 }

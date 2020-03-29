@@ -80,5 +80,5 @@
       <button class="cart_empty_button" bind:tap="goToCategory">前往购物</button>
     </view>
   </view>
-
+  
 </block>

@@ -1,3 +1,11 @@
-<Tabs tabs="{{tabs}}" bind:tabsItemChange="handleTabsItemChange">
-内容
-</Tabs>
+<view class="empty_page">
+    <view class="order_empty1">
+      <image mode="widthFix" src="/icons/order.png"></image>
+    </view>
+    <view class="order_empty2">
+      <text>还没有相关订单</text>
+    </view>
+    <view class="empty_button">
+      <button class="cart_empty_button" bind:tap="goToCategory">去逛逛</button>
+    </view>
+  </view>

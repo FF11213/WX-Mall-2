@@ -1,3 +1,4 @@
+import { request } from "../../request/index";
 
 Page({
   data: {
@@ -24,6 +25,33 @@ Page({
       }
     ],
   },
+
+  onShow(options){
+    // const token = wx.getStorageSync("token");
+    // if(!token) {
+    //   wx.navigateTo({
+    //     url: '/pages/login/login',
+    //   });
+    // } 
+    // 1.获取当前小程序的页面栈-数组 长度最大的是10页面
+    // let pages = getCurrentPages();
+    // console.log(pages);
+    
+    // 2.数组中 索引最大的页面就是当前页面
+    // let currentPage = pages[pages.length - 1];
+    // console.log(currentPage.options);
+    const type = "1";
+    this.getOrders(type);
+  },
+
+  // 获取订单列表的方法
+  async getOrders(type) {
+    const res = await request ({url: "/my/orders/all", data:{type}});
+    console.log(res);
+    
+
+  },
+
   // 标题点击事件 从子组件传递
   handleTabsItemChange(e) {
     // 获取被点击的标题索引
@@ -38,7 +66,13 @@ Page({
   },
 
   onLoad: function (options) {
-
+    console.log(options);
+    
+  },
+  goToCategory() {
+    wx.switchTab({
+      url: "/pages/category/category"
+    })
   },
 
 })

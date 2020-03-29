@@ -1,1 +1,32 @@
-/* pages/order/order.wxss */
+.empty_page {
+  background-color: #fff;
+  height: 100vh;
+}
+.empty_page .order_empty1 {
+  padding: 300rpx 0 0 223rpx;
+}
+.empty_page .order_empty1 image {
+  width: 160px;
+  height: 200px;
+}
+.empty_page .order_empty2 {
+  padding-left: 240rpx;
+}
+.empty_page .order_empty2 text {
+  padding: 40rpx;
+  color: #505050;
+}
+.empty_page .empty_button {
+  float: left;
+  padding-left: 158rpx;
+  padding-top: 350rpx;
+}
+.empty_page .empty_button button {
+  background-color: var(--themeColor);
+  color: #fff;
+  width: 450rpx;
+  height: 80rpx;
+  padding-top: 24rpx;
+  border-radius: 40rpx;
+  font-size: 26rpx;
+}

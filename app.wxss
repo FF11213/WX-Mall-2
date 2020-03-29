@@ -13,7 +13,7 @@ page{
   --themeColor: #eb4450;
   /* --themeColor: #0252bb; */
   /* 定义同意的字体大小 */
-  font-size: 28rpx;
+  font-size: 30rpx;
 }
 
 image {

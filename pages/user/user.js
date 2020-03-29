@@ -7,5 +7,11 @@ Page({
     this.setData({
       userinfo
     })
-  }
+  },
+    // 跳转登录
+    goToLogin() {
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
+    },
 })

@@ -1,1 +1,6 @@
-/* pages/auth/auth.wxss */
+button {
+  margin-top: 400rpx;
+  width: 80%;
+  background-color: var(--themeColor);
+  color: #fff;
+}

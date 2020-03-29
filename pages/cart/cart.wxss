@@ -126,10 +126,10 @@ page {
   height: 100vh;
 }
 .empty_page .cart_empty1 {
-  padding: 200rpx 0 20rpx 25rpx;
+  padding: 250rpx 0 20rpx 25rpx;
 }
 .empty_page .cart_empty1 text {
-  font-size: 46rpx;
+  font-size: 52rpx;
   font-weight: 600;
   padding: 40rpx;
   color: #fff;
@@ -138,7 +138,7 @@ page {
   padding: 0 0 40rpx 25rpx;
 }
 .empty_page .cart_empty2 text {
-  font-size: 50rpx;
+  font-size: 56rpx;
   font-weight: 600;
   padding: 40rpx;
   color: #fff;

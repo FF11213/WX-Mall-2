@@ -1,1 +1,1 @@
-<button type="warn" open-type="getUserInfo" plain="{{true}}" bindgetuserinfo="handleGetUserInfo"> 登录 </button>
+<button open-type="getUserInfo"  bindgetuserinfo="handleGetUserInfo"> 登录 </button>

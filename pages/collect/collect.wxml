@@ -1,2 +1,37 @@
-<!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<block wx:if="{{collect.length!==0}}">
+  <view class="collect_main">
+    <navigator 
+      class="goods_item" 
+      wx:for="{{collect}}"
+      wx:key="goods_id"
+      url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}"
+      >
+        <!-- 左侧图片容器 -->
+        <view class="item_img">
+          <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+        </view>
+        <!-- 右侧商品容器 -->
+        <view class="item_info">
+          <view class="info_name">{{item.goods_name}}</view>
+          <view class="info_price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
+  </view>
+</block>
+
+
+
+
+<block wx:else>
+  <view class="empty_page">
+    <view class="collect_empty1">
+      <image mode="widthFix" src="/icons/collect.png"></image>
+    </view>
+    <view class="collect_empty2">
+      <text>还没有相关收藏</text>
+    </view>
+    <view class="empty_button">
+      <button class="cart_empty_button" bind:tap="goToCategory">去逛逛</button>
+    </view>
+  </view>
+</block>
