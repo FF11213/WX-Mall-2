@@ -13,7 +13,8 @@
     "pages/pay/pay",
     "pages/search/search",
     "pages/user/user",
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/address/address"
   ],
   "window": {
     "backgroundTextStyle": "light",

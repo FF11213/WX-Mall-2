@@ -8,9 +8,9 @@
   flex: 1;
   justify-content: center;
   align-items: center;
-  padding: 15rpx 0;
+  padding: 20rpx 0;
 }
 .active {
   color: var(--themeColor);
-  border-bottom: 5rpx solid currentColor;
+  border-bottom: 2rpx solid currentColor;
 }

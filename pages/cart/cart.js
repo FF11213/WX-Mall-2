@@ -1,4 +1,4 @@
-import { getSetting, chooseAddress, openSetting, showToast } from "../../utils/asyncWx.js";
+import { getSetting, chooseAddress, openSetting, showToast, showModal } from "../../utils/asyncWx.js";
 Page({
   data: {
     address: {},
@@ -134,6 +134,19 @@ Page({
     const {address,totalNum} = this.data;
     if(!address.userName) {
       await showToast({title:"您还没有选择收货地址"});
+      // wx.showModal({
+      //   title: '请先添加收获地址',
+      //   confirmColor: '#eb4450',
+      //   success (res) {
+      //     if (res.confirm) {
+      //       wx.navigateTo({
+      //         url: '/pages/address/address',
+      //       });
+      //     } else if (res.cancel) {
+      //       return;
+      //     }
+      //   }
+      // })
       return ;
     }
     

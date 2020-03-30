@@ -44,7 +44,7 @@
 }
 .empty_page .collect_empty2 text {
   padding: 40rpx;
-  color: #505050;
+  color: #464646;
 }
 .empty_page .empty_button {
   float: left;

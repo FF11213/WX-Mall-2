@@ -14,4 +14,10 @@ Page({
         url: "/pages/login/login"
       })
     },
+
+    callService() {
+      wx.makePhoneCall({
+        phoneNumber: '123456789',
+      });
+    }
 })

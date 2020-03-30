@@ -1,0 +1,18 @@
+.receive_address_row .address_btn {
+  padding: 30rpx;
+}
+.receive_address_row .address_btn button {
+  width: 70%;
+}
+.receive_address_row .user_info_row {
+  display: flex;
+  padding: 30rpx;
+  border-bottom: 15rpx solid #dedede;
+}
+.receive_address_row .user_info_row .user_info {
+  flex: 5;
+}
+.receive_address_row .user_info_row .user_phone {
+  flex-direction: 3;
+  text-align: right;
+}

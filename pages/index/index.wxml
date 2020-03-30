@@ -1,6 +1,7 @@
 <!-- index.wxml -->
 <view class="wxm_index">
   <!-- 搜索框 -->
+
   <SearchInput></SearchInput>
   <!-- 轮播图 -->
   <view class="index_swiper">
@@ -11,18 +12,20 @@
           widthFix 宽高等比例发生变化 -->
     <swiper autoplay indicator-dots circular>
       <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator>
+        <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
           <image mode="widthFix" src="{{item.image_src}}"></image>
         </navigator>
       </swiper-item>
     </swiper>
   </view>
+
   <!-- 分类导航栏 -->
   <view class="index_cate">
-    <navigator wx:for="{{cateList}}" wx:key="name">
+    <navigator wx:for="{{cateList}}" wx:key="name" url="/pages/category/category" open-type="switchTab">
       <image mode="widthFix" src="{{item.image_src}}"></image>
     </navigator>
   </view>
+
   <!-- 楼层 -->
   <view class="index_floor">
     <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
@@ -37,6 +40,7 @@
           wx:for-item="item2" 
           wx:for-index="index2" 
           wx:key="name"
+          url="{{item2.navigator_url}}"
         >
         <image mode="{{index2 === 0 ? 'widthFix' : 'scaleToFill'}}" src="{{item2.image_src}}"></image>
         </navigator>

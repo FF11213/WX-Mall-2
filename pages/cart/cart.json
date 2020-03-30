@@ -1,6 +1,4 @@
 {
-  "usingComponents": {
-    "slide-view": "../../components/slideview/slideview"
-  },
+  "usingComponents": {},
   "navigationBarTitleText": "购物车" 
 }
