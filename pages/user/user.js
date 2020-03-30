@@ -7,17 +7,19 @@ Page({
     this.setData({
       userinfo
     })
-  },
-    // 跳转登录
-    goToLogin() {
-      wx.navigateTo({
-        url: "/pages/login/login"
-      })
-    },
+    // console.log(userinfo);
 
-    callService() {
-      wx.makePhoneCall({
-        phoneNumber: '123456789',
-      });
-    }
+  },
+  // 跳转登录
+  goToLogin() {
+    wx.navigateTo({
+      url: "/pages/login/login"
+    })
+  },
+
+  callService() {
+    wx.makePhoneCall({
+      phoneNumber: '123456789',
+    });
+  }
 })

@@ -1,20 +1,32 @@
-<block wx:if="{{cart.length!==0}}">
-  <!-- 收获地址 -->
-  <view class="receive_address_row">
-    <!-- 当收货地址不存在时，按钮显示 -->
-    <view class="address_btn" wx:if="{{!address.userName}}">
-      <button bind:tap="handleChooseAddress" type="warn" plain>添加收货地址</button>
+<block wx:if="{{!userName}}">
+  <view class="empty_page">
+    <view class="cart_empty1">
+      <text>登录账户</text>
     </view>
-    <!-- 当收货地址存在时 显示详细信息 -->
-    <view wx:else class="user_info_row">
-      <view class="user_info">
-        <view>{{address.userName}}</view>
-        <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
-      </view>
-      <view class="user_phone">{{address.telNumber}}</view>
+    <view class="cart_empty2">
+      <text>查看购物车中的商品</text>
+    </view>
+    <view class="empty_button">
+      <button class="cart_empty_button" bind:tap="goToLogin">登录</button>
     </view>
   </view>
+</block>
 
+<block wx:elif="{{cart.length==0}}">
+  <view class="empty_page">
+    <view class="cart_empty1">
+      <text>购物车空空如也</text>
+    </view>
+    <view class="cart_empty2">
+      <text>需要一点灵感吗?</text>
+    </view>
+    <view class="empty_button">
+      <button class="cart_empty_button" bind:tap="goToCategory">前往购物</button>
+    </view>
+  </view>
+</block>
+
+<block wx:else>
   <!-- 购物车内容 -->
   <view class="cart_content">
     <view class="cart_title">购物车</view>
@@ -68,17 +80,3 @@
   </view>
 </block>
 
-<block wx:else>
-  <view class="empty_page">
-    <view class="cart_empty1">
-      <text>购物车空空如也</text>
-    </view>
-    <view class="cart_empty2">
-      <text>需要一点灵感吗?</text>
-    </view>
-    <view class="empty_button">
-      <button class="cart_empty_button" bind:tap="goToCategory">前往购物</button>
-    </view>
-  </view>
-  
-</block>

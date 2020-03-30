@@ -1,6 +1,13 @@
-button {
+.login_btn {
+  padding: 30rpx;
   margin-top: 400rpx;
-  width: 80%;
+}
+.login_btn button {
   background-color: var(--themeColor);
   color: #fff;
+  width: 70%;
+  padding-top: 25rpx;
+  font-size: 28rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
 }

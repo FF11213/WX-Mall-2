@@ -1,33 +1,15 @@
 page {
   padding-bottom: 90rpx;
 }
-.receive_address_row .address_btn {
-  padding: 30rpx;
-}
-.receive_address_row .address_btn button {
-  width: 70%;
-}
-.receive_address_row .user_info_row {
-  display: flex;
-  padding: 30rpx;
-  border-bottom: 15rpx solid #dedede;
-}
-.receive_address_row .user_info_row .user_info {
-  flex: 5;
-}
-.receive_address_row .user_info_row .user_phone {
-  flex-direction: 3;
-  text-align: right;
-}
 .cart_content .cart_title {
-  padding: 25rpx;
+  padding: 30rpx;
   font-size: 45rpx;
   color: var(--themeColor);
   font-weight: 600;
 }
 .cart_content .cart_main .cart_item {
   display: flex;
-  padding: 15rpx;
+  padding: 30rpx 15rpx;
   border-bottom: 1rpx solid #ccc;
 }
 .cart_content .cart_main .cart_item .cart_ckb_wrap {
@@ -43,7 +25,7 @@ page {
   align-items: center;
 }
 .cart_content .cart_main .cart_item .cart_img_wrap image {
-  width: 80%;
+  width: 90%;
 }
 .cart_content .cart_main .cart_item .cart_info_wrap {
   flex: 4;
@@ -57,6 +39,7 @@ page {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: #252525;
+  font-size: 26rpx;
 }
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap {
   display: flex;
@@ -65,14 +48,14 @@ page {
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .goods_price {
   float: right;
   color: var(--themeColor);
-  font-size: 34rpx;
+  font-size: 32rpx;
 }
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool {
   display: flex;
 }
 .cart_content .cart_main .cart_item .cart_info_wrap .goods_price_wrap .cart_num_tool .num_edit {
-  width: 55rpx;
-  height: 55rpx;
+  width: 50rpx;
+  height: 50rpx;
   display: flex;
   justify-content: center;
   align-items: center;

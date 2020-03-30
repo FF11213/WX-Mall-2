@@ -16,7 +16,7 @@
   width: 100%;
 }
 .index_floor .floor_group .floor_title {
-  padding: 10rpx 0;
+  padding-top: 40rpx;
 }
 .index_floor .floor_group .floor_title image {
   width: 100%;

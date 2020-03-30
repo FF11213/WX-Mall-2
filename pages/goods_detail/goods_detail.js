@@ -2,7 +2,6 @@ var app = getApp();
 import { request } from "../../request/index";
 
 Page({
-
   data: {
     goodsObj: {},
     isCollect: false // 商品是否被收藏

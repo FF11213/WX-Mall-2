@@ -6,10 +6,18 @@ Page({
     allChecked: false,
     totalPrice: 0,
     totalNum: 0,
+    userName: ''
   },
   onShow() {
+    // 获取登录信息
+    const userinfo = wx.getStorageSync("userinfo");
+    
+    this.setData({
+      userName: userinfo.nickName
+    }) 
     // 获取缓存中收货地址信息
     const address = wx.getStorageSync("address");
+
     // 获取缓存中购物车的数据
     const cart = wx.getStorageSync("cart") || [];
     // 计算全选
@@ -121,6 +129,13 @@ Page({
   //     console.log('slide button tap', e.detail)
   // },
 
+  // 跳转登录
+  goToLogin() {
+    wx.navigateTo({
+      url: "/pages/login/login"
+    })
+  },
+
   // 跳转购物
   goToCategory() {
     wx.switchTab({
@@ -133,20 +148,8 @@ Page({
     // 1.判断收货地址 
     const {address,totalNum} = this.data;
     if(!address.userName) {
-      await showToast({title:"您还没有选择收货地址"});
-      // wx.showModal({
-      //   title: '请先添加收获地址',
-      //   confirmColor: '#eb4450',
-      //   success (res) {
-      //     if (res.confirm) {
-      //       wx.navigateTo({
-      //         url: '/pages/address/address',
-      //       });
-      //     } else if (res.cancel) {
-      //       return;
-      //     }
-      //   }
-      // })
+      // await showToast({title:"您还没有选择收货地址"});
+      await showModal();
       return ;
     }
     
