@@ -9,5 +9,5 @@
   </view>
 </view>
 <view class="search_content">
-  <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="search_item" wx:for="{{goods}}" wx:key="goods_id">{{item.goods_name}}</navigator>
+  <navigator hover-class="noshadow" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="search_item" wx:for="{{goods}}" wx:key="goods_id">{{item.goods_name}}</navigator>
 </view>

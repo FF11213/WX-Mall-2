@@ -5,6 +5,7 @@
       wx:for="{{collect}}"
       wx:key="goods_id"
       url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}"
+      hover-class="noshadow"
       >
         <!-- 左侧图片容器 -->
         <view class="item_img">

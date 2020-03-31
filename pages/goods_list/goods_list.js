@@ -8,16 +8,16 @@ Page({
         value: "综合",
         isActive: true
       },
-      {
-        id: 1,
-        value: "销量",
-        isActive: false
-      },
-      {
-        id: 2,
-        value: "价格",
-        isActive: false
-      }
+      // {
+      //   id: 1,
+      //   value: "销量",
+      //   isActive: false
+      // },
+      // {
+      //   id: 2,
+      //   value: "价格",
+      //   isActive: false
+      // }
     ],
     goodsList: []
   },

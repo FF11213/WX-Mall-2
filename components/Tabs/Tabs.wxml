@@ -6,6 +6,7 @@
     wx:key="id"
     bind:tap="handleItemTap"
     data-index="{{index}}"
+    hover-class="noshadow"
     >
     {{item.value}}
     </view>

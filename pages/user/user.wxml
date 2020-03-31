@@ -11,19 +11,19 @@
   </view>
   <view class="user_content">
     <view class="user_main">
-      <navigator url="/pages/order/order">
+      <navigator url="/pages/order/order" hover-class="noshadow">
         <view class="iconfont icon-wodedingdan"></view>
         <view class="mian_name">我的订单</view>
       </navigator>
-      <navigator url="/pages/address/address">
+      <navigator url="/pages/address/address" hover-class="noshadow">
         <view class="iconfont icon-shouhuodizhi"></view>
         <view class="mian_name">我的地址</view>
       </navigator>
-      <navigator>
+      <navigator hover-class="noshadow">
         <view class="iconfont icon-history"></view>
         <view class="mian_name">我的历史</view>
       </navigator>
-      <navigator url="/pages/collect/collect">
+      <navigator url="/pages/collect/collect" hover-class="noshadow">
         <view class="iconfont icon-chakantiezigengduoshoucang"></view>
         <view class="mian_name">我的收藏</view>
       </navigator>
@@ -35,11 +35,11 @@
         <view class="iconfont icon-serve"></view>
         <view class="mian_name">联系客服</view>
       </view>
-      <navigator url="/pages/feedback/feedback">
+      <navigator url="/pages/feedback/feedback" hover-class="noshadow">
         <view class="iconfont icon-Opinion"></view>
         <view class="mian_name">意见反馈</view>
       </navigator>
-      <navigator>
+      <navigator hover-class="noshadow">
         <view class="iconfont icon-guanyu"></view>
         <view class="mian_name">关于我们</view>
       </navigator>
@@ -65,7 +65,7 @@
     </view>
   </view>
   <view class="empty_kefu">
-    <navigator>
+    <navigator hover-class="noshadow">
       <view class="iconfont icon-serve"></view>
       <view class="mian_name">联系客服</view>
     </navigator>

@@ -15,8 +15,15 @@ page {
   .cart_main {
     .cart_item {
       display: flex;
-      padding: 30rpx 15rpx;
-      border-bottom: 1rpx solid #ccc;
+      padding: 40rpx 20rpx 25rpx 15rpx;
+      border-bottom: 1rpx solid rgb(211, 211, 211);
+      position: relative;
+
+      .iconfont{
+        position: absolute;
+        top: 20rpx;
+        right: 20rpx;
+      }
 
       .cart_ckb_wrap {
         flex: 1;
@@ -25,12 +32,35 @@ page {
         align-items: center;
 
         checkbox-group {
-          checkbox {}
+          checkbox .wx-checkbox-input {
+            width: 36rpx;
+            height: 36rpx;
+            border-radius: 50%;
+          }
+
+          /*checkbox选中后样式  */
+          checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+            background: #eb4450;
+            border-color: #eb4450;
+          }
+
+          /*checkbox选中后图标样式  */
+          checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+            width: 28rpx;
+            height: 16rpx;
+            line-height: 20rpx;
+            text-align: center;
+            font-size: 26rpx;
+            color: #fff;
+            background: transparent;
+            transform: translate(-50%, -50%) scale(1);
+            -webkit-transform: translate(-50%, -50%) scale(1);
+          }
         }
       }
 
       .cart_img_wrap {
-        flex: 2;
+        flex: 3;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,10 +71,11 @@ page {
       }
 
       .cart_info_wrap {
-        flex: 4;
+        flex: 5;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding-left: 20rpx;
 
         .goods_name {
           display: -webkit-box;
@@ -69,8 +100,9 @@ page {
             display: flex;
 
             .num_edit {
-              width: 50rpx;
-              height: 50rpx;
+              width: 45rpx;
+              height: 45rpx;
+              border-radius: 10rpx;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -86,10 +118,10 @@ page {
             }
           }
         }
-
       }
     }
   }
+
 }
 
 .fotter_tool {
@@ -101,18 +133,46 @@ page {
   background-color: #fff;
   display: flex;
   border-top: 1rpx solid #ccc;
+  z-index: 999;
 
   .all_chk_wrap {
     flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    checkbox-group {
+      checkbox .wx-checkbox-input {
+        width: 36rpx;
+        height: 36rpx;
+        border-radius: 50%;
+      }
+
+      /*checkbox选中后样式  */
+      checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+        background: #eb4450;
+        border-color: #eb4450;
+      }
+
+      /*checkbox选中后图标样式  */
+      checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+        width: 28rpx;
+        height: 16rpx;
+        line-height: 20rpx;
+        text-align: center;
+        font-size: 26rpx;
+        color: #fff;
+        background: transparent;
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+      }
+    }
   }
 
   .total_price {
     flex: 5;
     text-align: right;
-    padding: 20rpx 15rpx 0 0;
+    padding: 22rpx 15rpx 0 0;
 
     .total_price_text {
       color: var(--themeColor);
@@ -126,7 +186,7 @@ page {
     flex: 2;
     background-color: var(--themeColor);
     color: white;
-    font-size: 32rpx;
+    font-size: 30rpx;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -135,11 +195,13 @@ page {
   }
 }
 
-.empty_page{
+.empty_page {
   background-color: var(--themeColor);
   height: 100vh;
-  .cart_empty1{
+
+  .cart_empty1 {
     padding: 250rpx 0 20rpx 25rpx;
+
     // background-color: var(--themeColor);
     text {
       font-size: 52rpx;
@@ -149,31 +211,33 @@ page {
       // color: var(--themeColor);
     }
   }
-  .cart_empty2{
+
+  .cart_empty2 {
     padding: 0 0 40rpx 25rpx;
+
     // background-color: var(--themeColor);
     text {
-      font-size: 56rpx;
+      font-size: 52rpx;
       font-weight: 600;
       padding: 40rpx;
       color: #fff;
       // color: var(--themeColor);
     }
   }
-  
+
   .empty_button {
     float: left;
     padding-left: 65rpx;
     // background-color: var(--themeColor);
-  
+
     button {
       // background-color: var(--themeColor);
       color: #000;
       width: 280rpx;
       height: 80rpx;
-      padding-top: 24rpx;
+      padding-top: 22rpx;
       border-radius: 40rpx;
-      font-size: 26rpx;
+      font-size: 28rpx;
     }
   }
 }

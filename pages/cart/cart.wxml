@@ -11,7 +11,6 @@
     </view>
   </view>
 </block>
-
 <block wx:elif="{{cart.length==0}}">
   <view class="empty_page">
     <view class="cart_empty1">
@@ -25,21 +24,21 @@
     </view>
   </view>
 </block>
-
 <block wx:else>
   <!-- 购物车内容 -->
   <view class="cart_content">
-    <view class="cart_title">购物车</view>
+    <!-- <view class="cart_title">购物车</view> -->
     <view class="cart_main">
       <view class="cart_item" wx:for="{{cart}}" wx:key="goods_id">
+        <view class="iconfont icon-qita" bind:tap="handleRemove" data-id="{{item.goods_id}}"></view>
         <!-- 复选框 -->
         <view class="cart_ckb_wrap">
-          <checkbox-group data-id="{{item.goods_id}}" bindchange="handleItemChange">
-            <checkbox checked="{{item.checked}}"></checkbox>
+          <checkbox-group data-id="{{item.goods_id}}" bindchange="handleItemChange" >
+            <checkbox color="#eb4450" checked="{{item.checked}}"></checkbox>
           </checkbox-group>
         </view>
         <!-- 商品图片 -->
-        <navigator class="cart_img_wrap">
+        <navigator class="cart_img_wrap" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" hover-class="noshadow">
           <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
         </navigator>
         <!-- 商品信息 -->
@@ -61,13 +60,12 @@
       </view>
     </view>
   </view>
-
   <!-- 底部工具栏 -->
   <view class="fotter_tool">
     <!-- 全选 -->
     <view class="all_chk_wrap">
       <checkbox-group bindchange="handleItemAllCheck">
-        <checkbox checked="{{allChecked}}">全选</checkbox>
+        <checkbox color="#eb4450" checked="{{allChecked}}">全选</checkbox>
       </checkbox-group>
     </view>
     <!-- 总价格 -->
@@ -79,4 +77,3 @@
     <view class="order_pay_wrap" bind:tap="handlePay">结算({{totalNum}})</view>
   </view>
 </block>
-

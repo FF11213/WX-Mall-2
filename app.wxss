@@ -19,3 +19,7 @@ page{
 image {
   width: 100%;
 }
+
+.noshadow{
+  hover-class:none;
+}

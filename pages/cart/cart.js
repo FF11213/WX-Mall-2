@@ -1,4 +1,4 @@
-import { getSetting, chooseAddress, openSetting, showToast, showModal } from "../../utils/asyncWx.js";
+import { getSetting, chooseAddress, openSetting, showModal } from "../../utils/asyncWx.js";
 Page({
   data: {
     address: {},
@@ -10,11 +10,11 @@ Page({
   },
   onShow() {
     // 获取登录信息
-    const userinfo = wx.getStorageSync("userinfo");
-    
+    const userinfo = wx.getStorageSync("userinfo"); 
     this.setData({
       userName: userinfo.nickName
     }) 
+
     // 获取缓存中收货地址信息
     const address = wx.getStorageSync("address");
 
@@ -124,11 +124,6 @@ Page({
   },
 
 
-  // 左滑删除
-  //   slideButtonTap(e) {
-  //     console.log('slide button tap', e.detail)
-  // },
-
   // 跳转登录
   goToLogin() {
     wx.navigateTo({
@@ -146,18 +141,43 @@ Page({
   // 结算
   async handlePay() {
     // 1.判断收货地址 
-    const {address,totalNum} = this.data;
+    const {address} = this.data;
     if(!address.userName) {
       // await showToast({title:"您还没有选择收货地址"});
-      await showModal();
-      return ;
+      const res = await showModal({content:"请您先添加收货地址"});
+      if (res.confirm) {
+        wx.navigateTo({
+          url: '/pages/address/address',
+        });
+      }else {
+        return ;
+      }
     }
     
     // 2. 跳转到支付页面
     wx.navigateTo({
       url: '/pages/pay/pay',
     });
+  },
 
+  // 移出购物车
+  // async handleRemove(e) {
+  //   await showModalRemove();
+  // }
+  async handleRemove(e) {
+    // 1.获取传递过来的参数
+    const { id } = e.currentTarget.dataset;
+    // 2.获取购物车数组
+    let { cart } = this.data;
+    // 3.找到需要移除的商品的索引
+    const index = cart.findIndex(v => v.goods_id === id);
+    const res = await showModal({content:"是否将商品移出购物车"});
+    if(res.confirm){
+      cart.splice(index,1);
+      this.setCart(cart);
+    }else{
+      return ;
+    }
   }
 
 })

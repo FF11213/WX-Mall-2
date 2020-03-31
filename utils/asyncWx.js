@@ -46,6 +46,7 @@ export const showToast = ({ title }) => {
       title: '提示',
       icon: "none",
       title: title,
+      duration: 1000,
       success: (res) => {
         resolve(res);
       },
@@ -56,19 +57,34 @@ export const showToast = ({ title }) => {
   })
 }
 
-export const showModal = () => {
+export const showModal = ({content}) => {
   return new Promise((resolve, reject) => {
     wx.showModal({
-      title: '请先添加收获地址',
+      title: "提示",
+      content: content,
       confirmColor: '#eb4450',
-      success(res) {
-        if (res.confirm) {
-          wx.navigateTo({
-            url: '/pages/address/address',
-          });
-        } else if (res.cancel) {
-          return;
-        }
+      success :(res) => {
+        resolve(res);
+      },
+      fail:(err) => {
+        reject(err);
+      }
+    });
+  })
+}
+
+
+export const showModalRemove = () => {
+  return new Promise((resolve, reject) => {
+    wx.showModal({
+      title:'提示', 
+      content: "是否将商品移出购物车",
+      confirmColor: '#eb4450',
+      success :(res) => {
+        resolve(res);
+      },
+      fail:(err) => {
+        reject(err);
       }
     });
   })

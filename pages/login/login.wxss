@@ -6,7 +6,7 @@
   background-color: var(--themeColor);
   color: #fff;
   width: 70%;
-  padding-top: 25rpx;
+  padding-top: 26rpx;
   font-size: 28rpx;
   height: 90rpx;
   border-radius: 45rpx;

@@ -32,6 +32,7 @@
           wx:for-item="item2" 
           wx:for-index="index2" 
           url="/pages/goods_list/goods_list?cid={{item2.cat_id}}"
+          hover-class="noshadow"
           >
             <image src="{{item2.cat_icon}}" mode="widthFix"></image>
             <view class="goods_name">{{item2.cat_name}}</view>
